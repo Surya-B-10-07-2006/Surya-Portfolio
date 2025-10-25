@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b91c1c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main S shape -->
+  <path fill="url(#sGradient)" d="M50 30 C30 30, 15 45, 15 65 C15 85, 30 100, 50 100 C70 100, 85 85, 85 65 C85 45, 70 30, 50 30 Z M150 65 C150 85, 165 100, 185 100 C205 100, 220 85, 220 65 C220 45, 205 30, 185 30 C165 30, 150 45, 150 65 Z"/>
+  
+  <!-- Connecting middle section -->
+  <path fill="url(#sGradient)" d="M85 65 C85 85, 100 100, 120 100 C140 100, 155 85, 155 65 C155 45, 140 30, 120 30 C100 30, 85 45, 85 65 Z"/>
+</svg>
