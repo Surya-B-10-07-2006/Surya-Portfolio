@@ -16,7 +16,7 @@ const projects = [
     status: "Deployed",
     description: "Built and deployed a responsive personal portfolio website with light/dark mode, theme switcher, animated UI, and integrated social links. Optimized for accessibility, mobile responsiveness, and deployed via GitHub Pages.",
     tech: ["React", "Tailwind CSS", "TypeScript", "Vite"],
-    link: "https://www.surya-portfolio-7.netlify.app",
+    link: "https://surya-b.netlify.app/",
     isActive: false,
   },
 ];
