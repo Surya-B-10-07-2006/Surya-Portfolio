@@ -20,7 +20,7 @@ const skills = [
     tags: ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
   },
   {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg",
+    icon: "https://mailmeteor.com/logos/assets/PNG/Microsoft_Office_Excel_Logo_128px.png",
     title: "Excel",
     description: "Advanced formulas, pivot tables, and automation for reporting.",
     tags: ["Formulas", "Pivot Tables", "Automation"],

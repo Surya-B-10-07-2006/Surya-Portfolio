@@ -2,19 +2,19 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const interests = [
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    icon: "https://cdn-icons-png.flaticon.com/128/998/998331.png",
     title: "Data Analytics",
     tools: ["Tableau", "Power BI", "Excel", "Python", "SQL"],
     gradient: "from-blue-500 to-cyan-500",
   },
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    icon: "https://cdn-icons-png.flaticon.com/128/12594/12594396.png",
     title: "Business Intelligence",
     tools: ["Data Visualization", "Dashboard Development"],
     gradient: "from-purple-500 to-pink-500",
   },
   {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg",
+    icon: "https://cdn-icons-png.flaticon.com/128/12594/12594396.png",
     title: "Data Science",
     tools: ["Machine Learning", "Deep Learning", "Big Data Analytics"],
     gradient: "from-orange-500 to-red-500",
