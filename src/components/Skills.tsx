@@ -1,39 +1,38 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Database, BarChart3, Code2, FileSpreadsheet, Code } from "lucide-react";
 
 const skills = [
   {
-    icon: Database,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     title: "SQL",
     description: "Proficient in writing queries to extract, filter, and analyze data from relational databases.",
     tags: ["Queries", "Data Analysis", "Database Management"],
   },
   {
-    icon: BarChart3,
+    icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
     title: "Power BI",
     description: "Hands-on experience in building interactive dashboards and reports to visualize key business trends.",
     tags: ["Dashboards", "Visualization", "Reports"],
   },
   {
-    icon: Code2,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     title: "Python (Data Analytics)",
     description: "Skilled in using libraries like Pandas, NumPy, Matplotlib, Seaborn for data manipulation, EDA, and visualization.",
     tags: ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
   },
   {
-    icon: FileSpreadsheet,
+    icon: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg",
     title: "Excel",
     description: "Advanced formulas, pivot tables, and automation for reporting.",
     tags: ["Formulas", "Pivot Tables", "Automation"],
   },
   {
-    icon: Code,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
     title: "Java",
     description: "Skilled in using Java for building desktop applications and web applications.",
     tags: ["Java", "Spring Boot", "Hibernate", "JPA", "JDBC"],
   },
   {
-    icon: BarChart3,
+    icon: "https://cdn.worldvectorlogo.com/logos/tableau-software.svg",
     title: "Tableau",
     description: "Skilled in using Tableau for building data visualizations and dashboards.",
     tags: ["Tableau", "Data Visualization", "Dashboard Development"],
@@ -54,32 +53,29 @@ export const Skills = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-6 animate-slide-up">
-          {skills.map((skill, index) => {
-            const Icon = skill.icon;
-            return (
-              <Card key={index} className="group hover:scale-[1.02] transition-smooth">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center mb-4 group-hover:shadow-glow transition-smooth">
-                    <Icon className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <CardTitle>{skill.title}</CardTitle>
-                  <CardDescription>{skill.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {skill.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+          {skills.map((skill, index) => (
+            <Card key={index} className="group hover:scale-[1.02] transition-smooth">
+              <CardHeader>
+                <div className="w-16 h-16 rounded-lg bg-white dark:bg-gray-800 flex items-center justify-center mb-4 group-hover:shadow-lg transition-smooth p-2">
+                  <img src={skill.icon} alt={skill.title} className="w-full h-full object-contain" />
+                </div>
+                <CardTitle>{skill.title}</CardTitle>
+                <CardDescription>{skill.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skill.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
