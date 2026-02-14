@@ -5,6 +5,14 @@ import { ExternalLink, Sparkles } from "lucide-react";
 
 const projects = [
   {
+    title: "GoldPulse",
+    status: "Deployed",
+    description: "Streamlit app for predicting precious metal prices using ARIMA forecasting with real-time data and multi-currency support. Features ARIMA time series forecasting (1-day & 7-day predictions), Multi-metal support: Gold, Silver, Platinum, 10 currency support with proper symbols, Flexible units: Ounce, Gram, Kilogram, Sovereign, Animated neon-style visualizations, Historical data export (CSV).",
+    tech: ["Python", "Streamlit", "ARIMA"],
+    link: "https://gold-pulse.streamlit.app/",
+    isActive: false,
+  },
+  {
     title: "AI Startup Success Predictor",
     status: "Deployed",
     description: "A smart web app that evaluates startup ideas and delivers clear, AI-generated business insights. AI-Powered Evaluation using Groq API (Llama 3.1). Success Probability Score with reasoning. SWOT Analysis (strengths, weaknesses, opportunities, threats). 4-Week Execution Roadmap. Team & Hiring Guidance (8 essential roles). Funding & Legal Tips (5 each). Market Intelligence with competitor insights & name suggestions. Social Media Strategy (5 beginner-friendly tips). Monthly Trend Predictions. Downloadable Reports in text/markdown.",
