@@ -6,7 +6,7 @@ const education = {
   degree: "Bachelor of Technology",
   field: "Artificial Intelligence and Data Science",
   period: "September 2024 - Present",
-  cgpa: "7.3/10",
+  cgpa: "7.35/10",
 };
 
 const certifications = [
