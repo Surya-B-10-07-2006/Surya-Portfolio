@@ -86,7 +86,7 @@ export const Education = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-foreground text-xl">MERN Stack Intern</h3>
-                  <p className="text-muted-foreground text-sm">AlgoTutor — Completed Internship</p>
+                  <p className="text-muted-foreground text-sm">Infoziant — Completed Internship</p>
                 </div>
               </div>
               <Button variant="outline" size="sm" asChild className="border-primary/30 hover:border-primary hover:shadow-glow transition-smooth self-start sm:self-auto">
