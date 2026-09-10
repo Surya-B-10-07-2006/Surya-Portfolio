@@ -9,6 +9,11 @@ const education = {
   cgpa: "7.35/10",
 };
 
+const schooling = [
+  { title: "HSC", institution: "Government Higher Secondary School", score: "87.5%", year: "2023-2024" },
+  { title: "SSLC", institution: "Government Higher Secondary School", score: "64.5%", year: "2021-2022" },
+];
+
 const certifications = [
   { title: "Power BI for Data Analysis", issuer: "Microsoft", date: "May 2025" },
   { title: "Python for Data Analysis: Pandas & NumPy", issuer: "Coursera", date: "April 2025" },
@@ -77,7 +82,44 @@ export const Education = () => {
           </div>
         </div>
 
-        <div className="mt-6 animate-slide-up">
+        <div className="mt-6 animate-slide-up space-y-6">
+          <div className="glass-card gradient-border p-6 md:p-8 space-y-6 group hover:shadow-glow transition-smooth">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow-cyan transition-smooth">
+                  <Briefcase className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-foreground text-xl">Data Engineering with GenAI on Cloud Intern</h3>
+                  <p className="text-muted-foreground text-sm">CodeBoosters — Jul 2026</p>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed">
+              Built DataPulse AI, an AI-powered data cleaning platform that automated data cleaning, validation,
+              preprocessing, and quality assessment for 10,000+ records, reducing manual effort by 80%.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Built scalable ETL pipelines using SQL, Pandas, APIs, PySpark, and GenAI, improving data processing
+              efficiency by 30%.
+            </p>
+          </div>
+
+          <div className="glass-card gradient-border p-6 md:p-8 space-y-6 group hover:shadow-glow transition-smooth">
+            <div>
+              <p className="font-semibold text-foreground mb-3">Schooling</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {schooling.map((item, i) => (
+                  <div key={i} className="p-4 rounded-lg bg-muted/30 border border-border/60">
+                    <p className="text-sm font-semibold text-foreground">{item.title} - {item.institution}</p>
+                    <p className="text-sm text-muted-foreground">{item.score} | {item.year}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div className="glass-card gradient-border p-6 md:p-8 space-y-6 group hover:shadow-glow transition-smooth">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
               <div className="flex items-center gap-4">

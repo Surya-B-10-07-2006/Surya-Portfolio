@@ -27,25 +27,30 @@ const projects = [
     link: "https://data-pulse-ai.streamlit.app/",
     isActive: false,
   },
- {
-  title: "Streamlytics",
-  status: "In Development",
-  icon: BarChart3,
-  accentColor: "from-cyan-400 to-blue-500",
-  glowColor: "hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]",
-  description:
-    "Building an AI-powered entertainment analytics and recommendation platform for OTT and music streaming. Features user behaviour analytics, genre/language insights, interactive dashboards, churn detection, and personalized recommendations using KNN and content-based filtering.",
-  tech: [
-    "React",
-    "Python",
-    "Pandas",
-    "Scikit-learn",
-    "Plotly",
-    "Machine Learning",
-  ],
-  link: "#",
-  isActive: false,
-},
+  {
+    title: "InsightX",
+    status: "In Development",
+    icon: BarChart3,
+    accentColor: "from-cyan-400 to-blue-500",
+    glowColor: "hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]",
+    description:
+      "Built an ML + LLM engineering-risk intelligence platform ingesting PHR reports and GitHub repos, extracting 6+ project-health dimensions (code quality, team performance, dependencies, testing, delivery, historical signals) through automated data cleaning, feature engineering, and statistical risk profiling to predict project failure ahead of critical delivery milestones. Developed XGBoost, Random Forest, clustering, and forecasting models achieving up to 80% prediction accuracy for failure type, delivery delays, defect growth, technical-debt hotspots, and burnout risk; applied SHAP explainability and dependency analysis to surface key risk drivers as evidence-backed insights. Engineered an LLM-powered decision layer (Groq) converting ML outputs into executive summaries, root-cause explanations, what-if scenarios, and ROI simulations — delivered via a React dashboard, automated PDF reports, and real-time alerts for proactive risk mitigation.",
+    tech: ["React", "Python", "Machine Learning", "XGBoost", "Random Forest", "SHAP", "Groq"],
+    link: "#",
+    isActive: false,
+  },
+  {
+    title: "Powerleau",
+    status: "In Development",
+    icon: Globe,
+    accentColor: "from-purple-400 to-cyan-500",
+    glowColor: "hover:shadow-[0_0_30px_rgba(168,85,247,0.25)]",
+    description:
+      "Architected a multi-agent autonomous analytics platform (Python, LangChain-style orchestration, Groq LLM inference) integrating 3 specialized AI agents — Data Analyst, Data Scientist, BI Analyst — to autonomously ingest, clean, and analyze CSV/XLSX/JSON/Parquet datasets across 4+ file formats, reducing manual EDA and reporting time by an estimated 70–80% through parallelized agent workflows for diagnostic analysis, root-cause detection, and automated business recommendations. Built an end-to-end automated ML pipeline with intelligent target/problem-type detection, automated feature engineering, and model selection across classification, regression, forecasting, and anomaly detection tasks, incorporating cross-validation and SHAP-based explainability for model diagnostics — enabling non-technical stakeholders to interpret model decisions and driving BI-aligned, feasibility-scored business recommendations via LLM-powered (Groq) reasoning. Designed a "Verified Intelligence" traceability architecture combining Python computation, LLM reasoning (Groq), and real-time external evidence retrieval (Tavily API) to ground every AI-generated insight back to source data, calculations, and research citations — deployed on a full-stack React + FastAPI + MongoDB platform supporting reproducible analysis history and automated PDF/PPTX/XLSX/CSV report exports for enterprise-grade decision-making platform.",
+    tech: ["Python", "LangChain", "Groq", "FastAPI", "MongoDB", "React"],
+    link: "#",
+    isActive: false,
+  },
 ];
 
 export const Projects = () => {
@@ -94,7 +99,7 @@ export const Projects = () => {
                   {project.link && (
                     <Button variant="outline" size="sm" asChild className="w-full mt-auto border-primary/30 hover:border-primary hover:bg-primary/5 hover:shadow-glow transition-smooth group/btn">
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <span>View Live Project</span>
+                        <span>{project.link === "#" ? "Coming Soon" : "View Live Project"}</span>
                         <ExternalLink className="w-3.5 h-3.5 ml-2 group-hover/btn:translate-x-0.5 transition-smooth" />
                       </a>
                     </Button>
