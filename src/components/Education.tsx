@@ -1,24 +1,40 @@
-import { GraduationCap, Award, Briefcase, CheckCircle2, ExternalLink, CircleDot } from "lucide-react";
+import { GraduationCap, Briefcase, ExternalLink, CircleDot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const education = {
-  institution: "Sri Eshwar College of Engineering",
-  degree: "Bachelor of Technology",
-  field: "Artificial Intelligence and Data Science",
-  period: "September 2024 - Present",
-  cgpa: "7.35/10",
-};
-
-const schooling = [
-  { title: "HSC", institution: "Government Higher Secondary School", score: "87.5%", year: "2023-2024" },
-  { title: "SSLC", institution: "Government Higher Secondary School", score: "64.5%", year: "2021-2022" },
-];
-
-const certifications = [
-  { title: "Power BI for Data Analysis", issuer: "Microsoft", date: "May 2025" },
-  { title: "Python for Data Analysis: Pandas & NumPy", issuer: "Coursera", date: "April 2025" },
-  { title: "Excel For Beginners", issuer: "Microsoft", date: "January 2025" },
-  { title: "Java for Beginners", issuer: "Coursera", date: "October 2025" },
+const educationCards = [
+  {
+    title: "Bachelor of Technology",
+    subtitle: "Artificial Intelligence and Data Science",
+    institution: "Sri Eshwar College of Engineering",
+    period: "September 2024 - Present",
+    metricLabel: "CGPA",
+    metricValue: "7.35/10",
+    icon: GraduationCap,
+    iconClass: "gradient-primary",
+    iconGlowClass: "group-hover:shadow-glow",
+  },
+  {
+    title: "HSC",
+    subtitle: "Government Higher Secondary School",
+    institution: "Government Higher Secondary School",
+    period: "2023 - 2024",
+    metricLabel: "Percentage",
+    metricValue: "87.5%",
+    icon: GraduationCap,
+    iconClass: "bg-gradient-to-br from-cyan-500 to-blue-500",
+    iconGlowClass: "group-hover:shadow-glow-cyan",
+  },
+  {
+    title: "SSLC",
+    subtitle: "Government Higher Secondary School",
+    institution: "Government Higher Secondary School",
+    period: "2021 - 2022",
+    metricLabel: "Percentage",
+    metricValue: "64.5%",
+    icon: GraduationCap,
+    iconClass: "bg-gradient-to-br from-purple-500 to-pink-500",
+    iconGlowClass: "group-hover:shadow-glow-purple",
+  },
 ];
 
 const internshipSkills = ["MongoDB", "Express.js", "React.js", "Node.js", "REST APIs", "JavaScript", "Git", "Responsive Design"];
@@ -33,53 +49,35 @@ export const Education = () => {
         </div>
 
         <div className="space-y-6 animate-slide-up">
-          <div className="glass-card gradient-border p-6 space-y-5 group hover:shadow-glow transition-smooth">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-smooth">
-                <GraduationCap className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="font-bold text-foreground text-lg">{education.degree}</h3>
-                <p className="text-muted-foreground text-sm">{education.field}</p>
-              </div>
-            </div>
-            <div className="space-y-2 pl-1">
-              <p className="font-semibold text-foreground">{education.institution}</p>
-              <p className="text-muted-foreground text-sm">{education.period}</p>
-              <p className="text-muted-foreground text-sm">HSC – Government Higher Secondary School | 87.5% | 2023–2024</p>
-              <p className="text-muted-foreground text-sm">SSLC – Government Higher Secondary School | 64.5% | 2021–2022</p>
-            </div>
-            <div className="flex items-center gap-2 pt-1">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 text-sm rounded-full bg-primary/10 text-primary border border-primary/20 font-semibold font-mono">
-                <span className="glow-dot" />
-                CGPA: {education.cgpa}
-              </span>
-            </div>
-          </div>
-
-          <div className="glass-card gradient-border p-6 md:p-8 space-y-5 group hover:shadow-glow transition-smooth">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow-purple transition-smooth">
-                <Award className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="font-bold text-foreground text-lg">Certifications</h3>
-                <p className="text-muted-foreground text-sm">{certifications.length} verified credentials</p>
-              </div>
-            </div>
-            <div className="space-y-3">
-              {certifications.map((cert, i) => (
-                <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth">
-                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                  <div className="flex-1 min-w-0">
-                    <p className="font-medium text-foreground text-sm leading-tight">{cert.title}</p>
-                    <div className="flex items-center justify-between mt-0.5">
-                      <p className="text-xs text-muted-foreground">{cert.issuer}</p>
-                      <p className="text-xs text-primary font-medium">{cert.date}</p>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Education</p>
+            <div className="grid gap-6 md:grid-cols-3">
+              {educationCards.map((card, index) => {
+                const Icon = card.icon;
+                return (
+                  <div key={index} className="glass-card gradient-border p-6 space-y-5 group hover:shadow-glow transition-smooth">
+                    <div className="flex items-center gap-4">
+                      <div className={`w-12 h-12 rounded-xl ${card.iconClass} flex items-center justify-center flex-shrink-0 ${card.iconGlowClass} transition-smooth`}>
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-foreground text-lg">{card.title}</h3>
+                        <p className="text-muted-foreground text-sm">{card.subtitle}</p>
+                      </div>
+                    </div>
+                    <div className="space-y-2 pl-1">
+                      <p className="font-semibold text-foreground">{card.institution}</p>
+                      <p className="text-muted-foreground text-sm">{card.period}</p>
+                    </div>
+                    <div className="flex items-center gap-2 pt-1">
+                      <span className="inline-flex items-center gap-2 px-4 py-1.5 text-sm rounded-full bg-primary/10 text-primary border border-primary/20 font-semibold font-mono">
+                        <span className="glow-dot" />
+                        {card.metricLabel}: {card.metricValue}
+                      </span>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
