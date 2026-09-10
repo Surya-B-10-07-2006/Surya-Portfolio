@@ -32,7 +32,7 @@ export const Education = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-gradient">Education & Experience</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 animate-slide-up">
+        <div className="space-y-6 animate-slide-up">
           <div className="glass-card gradient-border p-6 space-y-5 group hover:shadow-glow transition-smooth">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-smooth">
@@ -46,6 +46,8 @@ export const Education = () => {
             <div className="space-y-2 pl-1">
               <p className="font-semibold text-foreground">{education.institution}</p>
               <p className="text-muted-foreground text-sm">{education.period}</p>
+              <p className="text-muted-foreground text-sm">HSC – Government Higher Secondary School | 87.5% | 2023–2024</p>
+              <p className="text-muted-foreground text-sm">SSLC – Government Higher Secondary School | 64.5% | 2021–2022</p>
             </div>
             <div className="flex items-center gap-2 pt-1">
               <span className="inline-flex items-center gap-2 px-4 py-1.5 text-sm rounded-full bg-primary/10 text-primary border border-primary/20 font-semibold font-mono">
@@ -55,7 +57,7 @@ export const Education = () => {
             </div>
           </div>
 
-          <div className="glass-card gradient-border p-6 space-y-5 group hover:shadow-glow transition-smooth">
+          <div className="glass-card gradient-border p-6 md:p-8 space-y-5 group hover:shadow-glow transition-smooth">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow-purple transition-smooth">
                 <Award className="w-6 h-6 text-white" />
@@ -80,9 +82,7 @@ export const Education = () => {
               ))}
             </div>
           </div>
-        </div>
 
-        <div className="mt-6 animate-slide-up space-y-6">
           <div className="glass-card gradient-border p-6 md:p-8 space-y-6 group hover:shadow-glow transition-smooth">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
               <div className="flex items-center gap-4">
@@ -104,20 +104,6 @@ export const Education = () => {
               Built scalable ETL pipelines using SQL, Pandas, APIs, PySpark, and GenAI, improving data processing
               efficiency by 30%.
             </p>
-          </div>
-
-          <div className="glass-card gradient-border p-6 md:p-8 space-y-6 group hover:shadow-glow transition-smooth">
-            <div>
-              <p className="font-semibold text-foreground mb-3">Schooling</p>
-              <div className="grid sm:grid-cols-2 gap-3">
-                {schooling.map((item, i) => (
-                  <div key={i} className="p-4 rounded-lg bg-muted/30 border border-border/60">
-                    <p className="text-sm font-semibold text-foreground">{item.title} - {item.institution}</p>
-                    <p className="text-sm text-muted-foreground">{item.score} | {item.year}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div className="glass-card gradient-border p-6 md:p-8 space-y-6 group hover:shadow-glow transition-smooth">
