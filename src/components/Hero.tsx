@@ -37,7 +37,6 @@ export const Hero = () => {
             </div>
 
             <div className="space-y-3">
-              <p className="text-muted-foreground text-lg font-medium tracking-[0.2em] uppercase font-mono">Dashboard Header</p>
               <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-gradient leading-none">Surya B</h1>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground/70">Data Analytics & Business Intelligence Enthusiast</h2>
             </div>
